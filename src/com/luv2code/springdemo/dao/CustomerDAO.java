@@ -6,7 +6,6 @@ import org.springframework.transaction.annotation.Transactional;
 
 import com.luv2code.springdemo.entity.Customer;
 
-@Transactional
 public interface CustomerDAO {
 
 	public List<Customer> getCustomers();
@@ -15,6 +14,9 @@ public interface CustomerDAO {
 
 	public Customer getCustomer(int theId);
 
-	void deleteCustomer(int theId);
-
+	public void deleteCustomer(int theId);
+	
+	public List<Customer> searchCustomers(String theSearchName);
 }
+
+
